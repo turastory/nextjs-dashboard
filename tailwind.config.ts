@@ -1,3 +1,4 @@
+import { fontFamily } from 'tailwindcss/defaultTheme';
 import type { Config } from 'tailwindcss';
 
 const config: Config = {
@@ -10,6 +11,10 @@ const config: Config = {
     extend: {
       gridTemplateColumns: {
         '13': 'repeat(13, minmax(0, 1fr))',
+      },
+      fontFamily: {
+        sans: ['var(--font-inter)', ...fontFamily.sans],
+        serif: ['var(--font-lusitana)', ...fontFamily.serif],
       },
       colors: {
         blue: {
